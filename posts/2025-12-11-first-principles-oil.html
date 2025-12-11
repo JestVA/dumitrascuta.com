@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>First principles from the oil pits - Orderflow Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="What open-outcry oil trading can teach us about building digital market systems."
+    />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <div class="header-inner">
+          <div class="brand">
+            <a href="/">Orderflow Notes</a>
+          </div>
+          <nav>
+            <a href="/">Posts</a>
+            <a href="/about.html">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <div class="page">
+          <article class="card">
+            <h1>First principles from the oil pits</h1>
+            <div class="meta">
+              <span>Dec 11, 2025</span>
+              <span>~7 min read</span>
+            </div>
+
+            <p>
+              Imagine standing in a crude oil pit: noise, gestures, fragments of
+              information being yelled across the ring. It looks chaotic, but it
+              is not arbitrary. Underneath is a simple structure:
+              <em>who trades with whom, in what size, and at what priority</em>.
+            </p>
+
+            <h2>Layers of reality</h2>
+            <p>
+              At the core you have <strong>physical constraints</strong>:
+              barrels move on ships, not in nanoseconds. On top of that you have
+              <strong>financial abstractions</strong>: futures, options,
+              structured products.
+            </p>
+
+            <p>
+              When we build software around markets, we often invert this and
+              start from the abstractions. Frameworks, services, orchestration.
+              The first-principles path goes the other way:
+            </p>
+
+            <pre><code>// Pseudocode, not implementation
+
+while (orders_incoming) {
+  normalize();
+  prioritize();
+  match();
+  record();
+}</code></pre>
+
+            <h2>Why this matters for systems design</h2>
+            <p>
+              If you align your architecture with the real stack of the market
+              (physical → microstructure → products → UI), you get:
+            </p>
+            <ul>
+              <li>fewer accidental layers</li>
+              <li>clearer failure modes</li>
+              <li>
+                a UI that reflects actual constraints, not just chart widgets
+              </li>
+            </ul>
+
+            <p>
+              That is why this blog is written in plain HTML. It is not
+              nostalgia. It is a reminder: you can always choose the simpler,
+              more honest layer to build on.
+            </p>
+          </article>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-inner">
+          <div>© 2025 Orderflow Notes.</div>
+          <div>Built with HTML, CSS and static files only.</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
