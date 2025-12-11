@@ -3,3 +3,15 @@ body {
   padding: 2rem;
   font-family: serif;
 }
+
+header {
+  margin-bottom: 2.5rem;
+}
+
+.root {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
